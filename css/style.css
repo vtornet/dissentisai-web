@@ -2,13 +2,21 @@ body {
   background-color: #000;
   color: #d4af37;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
-  padding: 50px 20px;
   margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+main {
+  padding: 120px 20px 60px; /* espacio superior para no quedar tapado por cabecera */
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .logo {
-  max-width: 600px;
+  max-width: 90%;
+  max-height: 200px;
   margin-bottom: 30px;
 }
 
@@ -20,7 +28,7 @@ h1 {
 .subtitulo {
   font-size: 18px;
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 800px;
   margin-inline: auto;
 }
 
@@ -31,31 +39,32 @@ h1 {
   padding: 12px 24px;
   text-decoration: none;
   border-radius: 30px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
 }
 
 .boton:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.05);
 }
 
 .lista {
   list-style: none;
   padding: 0;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .lista li {
   margin: 10px 0;
   font-size: 18px;
+  line-height: 1.6;
 }
 
-.lang-switcher {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 16px;
-  z-index: 999;
+.lista li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
 }
 
 .lang-switcher a {
@@ -74,10 +83,7 @@ h1 {
   color: #ffffff;
 }
 
-header {
-  position: relative;
-  padding-top: 40px;
-}
+/* Cabecera fija superior */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -91,12 +97,9 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #333;
 }
+
 .fixed-header img {
   max-height: 50px;
-}
-
-a, .boton {
-  transition: all 0.3s ease;
 }
 
 .logo:hover,
@@ -104,13 +107,41 @@ a, .boton {
   transform: scale(1.05);
 }
 
-.boton:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transform: scale(1.05);
+a, .boton {
+  transition: all 0.3s ease;
 }
 
-.lista li:hover {
-  color: #ffffff;
-  transform: translateX(5px);
+/* Responsive: móviles y tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .subtitulo {
+    font-size: 16px;
+  }
+
+  .lista li {
+    font-size: 16px;
+  }
+
+  .boton {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .fixed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .fixed-header img {
+    margin-bottom: 10px;
+  }
+
+  .lang-switcher {
+    position: static;
+    margin-top: 5px;
+  }
 }
