@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEST IDIOMA</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #d4af37;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid #333;
+      z-index: 1000;
+    }
+    .fixed-header img {
+      max-height: 50px;
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 10px;
+      font-size: 16px;
+      align-items: center;
+    }
+    .lang-switcher a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-switcher a.active {
+      color: #fff;
+    }
+    main {
+      padding-top: 120px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fixed-header">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" />
+  <div class="lang-switcher">
+    <a href="#" class="active">ES</a>
+    <a href="#">EN</a>
+  </div>
+</div>
+
+
+  <main>
+    <h1>Prueba selector de idioma</h1>
+    <p>Esto debe mostrar ES | EN arriba a la derecha.</p>
+  </main>
+
+</body>
+</html>
